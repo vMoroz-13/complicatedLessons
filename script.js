@@ -1,25 +1,40 @@
-let num = 266219 ;
+//Решение через if
+let arr;
+let lang = 'ru';
+if (lang === 'ru') {
+   arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+}
+if (lang === 'en') {
+	arr = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'];
+}
+console.log(arr);
 
-var arr = num.toString().split('') ;
+//Решение через switch-case
+let lang1 = 'en';
+switch (lang1) {
+	case 'ru':
+		 arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+	break;
+	case 'en':
+		arr = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'];
+	break;
+}
+console.log(arr);
 
+// Решение через многомерный массив: 
+let lang3 = 'ru';
+ arr = {
+	'ru':['пн', 'вт', 'ср','чт', 'пт', 'сб', 'вс'],
+	'en':['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'],
+};
+console.log(arr[lang3]);
 
-   let res = arr.reduce((sum, key) => sum  * key); 
-    console.log(res);
+let namePerson = prompt('Введите ваше имя');
+if(namePerson === 'Артем'){
+    console.log('Директор'); 
+}else if(namePerson === 'Максим'){
+    console.log('Преподователь'); 
+}else{
+    console.log('Студент'); 
 
-let sqr = res ** 3;
-
-    console.log(sqr);
-
-    //document.write(sqr.toString().split('').slice(0, 2).join());
-let twoArrey = sqr.toString().split('').slice(0, 2);
-
-let str = String(twoArrey);// строка
-document.write(str);
-
-twoArrey.sort((a, b)=>{
-    console.log (typeof(a, b));  //строка
-});
-
-twoArrey.forEach((item)=>{
-    document.write(Number(item)); //number
-})
+}
