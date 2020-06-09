@@ -1,40 +1,19 @@
-//Решение через if
-let arr;
-let lang = 'ru';
-if (lang === 'ru') {
-   arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+function createElem(arg){
+	//— Если в качестве аргумента передана не строка - функция оповещает об этом пользователя
+	if(typeof(arg) !== 'string'){
+console.log('Не строка');
+	}else{
+		//— В полученной (как аргумент) строке функция должна убрать все пробелы в начале и в конце
+		let res = arg.trim();
+	//— Если строка более 30 знаков - то после 30го символа
+	// часть текста скрывается и вместо них появляются три точки (...)
+	
+		if(res.length > 30){
+			let ff = res.substr(0, 30);
+			console.log(ff + '...');
+		}else{
+			console.log(res);
+		}
+	}
 }
-if (lang === 'en') {
-	arr = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'];
-}
-console.log(arr);
-
-//Решение через switch-case
-let lang1 = 'en';
-switch (lang1) {
-	case 'ru':
-		 arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
-	break;
-	case 'en':
-		arr = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'];
-	break;
-}
-console.log(arr);
-
-// Решение через многомерный массив: 
-let lang3 = 'ru';
- arr = [
-	['пн', 'вт', 'ср','чт', 'пт', 'сб', 'вс'],
-	['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'],
- ];
-console.log(arr[0]);
-
-let namePerson = prompt('Введите ваше имя');
-if(namePerson === 'Артем'){
-    console.log('Директор'); 
-}else if(namePerson === 'Максим'){
-    console.log('Преподователь'); 
-}else{
-    console.log('Студент'); 
-
-}
+createElem('12345678910123456789101231444444');
