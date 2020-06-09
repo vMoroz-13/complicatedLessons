@@ -10,16 +10,6 @@ let sqr = res ** 3;
 
     console.log(sqr);
 
-    //document.write(sqr.toString().split('').slice(0, 2).join());
-let twoArrey = sqr.toString().split('').slice(0, 2);
+  let str =sqr + '';
 
-let str = String(twoArrey);// строка
-document.write(str);
-
-twoArrey.sort((a, b)=>{
-    console.log (typeof(a, b));  //строка
-});
-
-twoArrey.forEach((item)=>{
-    document.write(Number(item)); //number
-})
+document.write(str.slice(0, 2));
