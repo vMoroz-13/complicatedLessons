@@ -23,11 +23,11 @@ console.log(arr);
 
 // Решение через многомерный массив: 
 let lang3 = 'ru';
- arr = {
-	'ru':['пн', 'вт', 'ср','чт', 'пт', 'сб', 'вс'],
-	'en':['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'],
-};
-console.log(arr[lang3]);
+ arr = [
+	['пн', 'вт', 'ср','чт', 'пт', 'сб', 'вс'],
+	['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'],
+ ];
+console.log(arr[0]);
 
 let namePerson = prompt('Введите ваше имя');
 if(namePerson === 'Артем'){
